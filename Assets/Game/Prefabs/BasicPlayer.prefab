@@ -62,6 +62,9 @@ MonoBehaviour:
   onPauseEvent: {fileID: 11400000, guid: e7e8464f1ed9e7443980192065bf809a, type: 2}
   pauseData: {fileID: 11400000, guid: b8ee33961fe2fab4698ebb6e24e05db2, type: 2}
   onPlayerDeathEvent: {fileID: 11400000, guid: 726750ba3073ae9448f2d9ff8491773f, type: 2}
+  wall:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &-8749340483236425559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +160,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7480811499540900403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -87,17 +87,23 @@ public class GameManager : Singleton<GameManager>
 		// Instantiate the player at the spawn point
 		GameObject go = Instantiate(sceneData.playerPrefab, sceneData.startPlayerSpawn.position, sceneData.startPlayerSpawn.rotation);
 		GameObject head = go.transform.Find("Head").gameObject;
+		GameObject arms = go.transform.Find("ArmsModel").gameObject;
 
-        // Configure Cinemachine camera to follow and look at the player
-        //sceneData.playerCamera.Follow = sceneData.playerPrefab.transform.GetChild(2);
-        sceneData.playerCamera.Follow = head.transform;
+		
+		// Configure Cinemachine camera to follow and look at the player
+		//sceneData.playerCamera.Follow = sceneData.playerPrefab.transform.GetChild(2);
+		sceneData.playerCamera.Follow = head.transform;
 		sceneData.playerCamera.LookAt = head.transform;
 
-		// Set up player's view reference to the camera
-		if (go.TryGetComponent(out PlayerController controller))
+        // Set up player's view reference to the camera
+        if (go.TryGetComponent(out PlayerController controller))
 		{
 			controller.View = sceneData.playerCamera.transform;
-		}
+            arms.transform.SetParent(sceneData.playerCamera.transform);
+			
+			arms.transform.localPosition = new Vector3(0, -2.6f, 0.2f);
+			arms.transform.localRotation = Quaternion.identity;
+        }
 	}
 
 	/// <summary>
@@ -146,6 +152,7 @@ public class GameManager : Singleton<GameManager>
 	{
 		yield return new WaitForSeconds(2);
 		Destroy(go);
+		Destroy(sceneData.playerCamera.transform.Find("ArmsModel").gameObject);
 		StartLevel();
 	}
 }

@@ -64,7 +64,7 @@ public class SceneDescriptor : MonoBehaviour
 	/// </summary>
 	[SerializeField] SceneData sceneData;
 
-	bool loaded = false;
+    bool loaded = false;
 
 	/// <summary>
 	/// Subscribe to scene loaded event when this component is enabled.

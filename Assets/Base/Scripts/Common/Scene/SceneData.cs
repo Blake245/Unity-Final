@@ -44,4 +44,5 @@ public class SceneData : ScriptableObjectBase
 	/// </summary>
 	[Tooltip("The music track that will play while this scene is active")]
 	public AudioClip backgroundMusic;
+	
 }

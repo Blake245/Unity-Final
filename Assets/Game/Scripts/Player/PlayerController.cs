@@ -275,7 +275,8 @@ public class PlayerController : MonoBehaviour
 
 		// Smoothly rotate the player towards the movement direction
 		transform.rotation = Quaternion.Euler(0, view.transform.eulerAngles.y, 0);
-			
+		//GameObject arms = transform.Find("ArmsModel").gameObject;
+		//arms.transform.rotation = Quaternion.Euler(0, view.transform.eulerAngles.y, 0);
 
 		// Apply gravity
 		velocity.y += playerData.gravity * Time.deltaTime;
@@ -375,9 +376,9 @@ public class PlayerController : MonoBehaviour
 		// Prevent attacking when clicking on UI elements
 		//if (EventSystem.current.IsPointerOverGameObject()) return;
 
-		//if (ctx.phase == InputActionPhase.Performed && animator != null) animator.SetTrigger("Attack");
-		if (ctx.phase == InputActionPhase.Performed) GetComponent<Inventory>()?.Use();
-		else if (ctx.phase == InputActionPhase.Canceled) GetComponent<Inventory>()?.StopUse();
+		if (ctx.phase == InputActionPhase.Performed && animator != null) animator.SetTrigger("Attack");
+		//if (ctx.phase == InputActionPhase.Performed) GetComponent<Inventory>()?.Use();
+		//else if (ctx.phase == InputActionPhase.Canceled) GetComponent<Inventory>()?.StopUse();
 	}
 
 	/// <summary>
@@ -501,7 +502,7 @@ public class PlayerController : MonoBehaviour
 				float resetTilt = Mathf.Lerp(cam.Lens.Dutch, 0, Time.deltaTime * 10);
 				cam.Lens.Dutch = 0;
 				float resetFOV = Mathf.Lerp(cam.Lens.FieldOfView, 60, Time.deltaTime * 10);
-				cam.Lens.FieldOfView = resetFOV;
+				cam.Lens.FieldOfView = 60;
 			}
 		}
 	}
