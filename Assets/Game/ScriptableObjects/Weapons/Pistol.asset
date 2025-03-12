@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632a79510398aa643aa6e38ecf2749fc, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  id: Pistol
+  displayName: Pistol
+  description: 
+  icon: {fileID: 0}
+  itemType: 0
+  allowMultiple: 0
+  maxStackSize: 1
+  equipable: 0
+  usageType: 0
+  animTriggerName: 
+  animEquipName: 
+  rigLayerWeight: []
+  itemPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 0}
+  fireRate: 0.5
+  spread: {x: 0.1, y: 0.1, z: 0.1}
+  rounds: 10
+  ammoPrefab: {fileID: 6198882224689759567, guid: 1aae8485e3a193d43b946e29e7a922dc, type: 3}
+  activeSound: {fileID: 0}
+  reloadSound: {fileID: 0}
