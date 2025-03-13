@@ -101,7 +101,8 @@ public class GameManager : Singleton<GameManager>
 			controller.View = sceneData.playerCamera.transform;
             arms.transform.SetParent(sceneData.playerCamera.transform);
 			
-			arms.transform.localPosition = new Vector3(0, -2.6f, 0.2f);
+			//arms.transform.localPosition = new Vector3(0, -2.6f, 0.2f);
+			arms.transform.localPosition = new Vector3(0, -1.7f, 0.13f);
 			arms.transform.localRotation = Quaternion.identity;
         }
 	}

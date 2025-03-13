@@ -454,7 +454,7 @@ public class PlayerController : MonoBehaviour
 	
 	private void StartWallRun()
 	{
-		playerData.gravity = -1;
+		playerData.gravity = -0.5f;
 		isWallRunning = true;
 
 		float tiltAngle = 0f;
